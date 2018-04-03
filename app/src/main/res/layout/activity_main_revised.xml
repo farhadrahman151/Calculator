@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForLog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="log"
+        />
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForPoint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonForLog"
+        android:text="."/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor1"
+        app:layout_constraintBottom_toTopOf="@id/buttonForPoint"
+        app:layout_constraintLeft_toLeftOf="@id/buttonForPoint"
+        android:text="1"/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:id="@+id/buttonFor4"
+        android:layout_height="@dimen/button_min_height" />
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor5"/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor6"/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor7"/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor8"/>
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor9"/>
+
+    <Button
+        android:id="@+id/buttonFor0"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonForPoint" />
+
+
+</android.support.constraint.ConstraintLayout>

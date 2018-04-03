@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="button_x_pow_y">
+        X<sup>y </sup>
+    </string>
+    <string name="button_x_pow_2">
+        X<sup>2 </sup>
+    </string>
+
+</resources>
