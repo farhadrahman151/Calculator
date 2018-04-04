@@ -220,7 +220,7 @@
         android:layout_alignStart="@+id/button20"
         android:layout_below="@+id/button9"
         android:layout_margin="@dimen/button_devider_width"
-        android:text="√x"
+        android:text="@string/button_root_x"
         android:onClick="setText"/>
 
     <Button
@@ -287,7 +287,7 @@
         android:layout_margin="@dimen/button_devider_width"
         android:layout_toLeftOf="@+id/button20"
         android:layout_toStartOf="@+id/button20"
-        android:text="π"
+        android:text="@string/button_pi"
         android:onClick="setText"/>
 
     <Button

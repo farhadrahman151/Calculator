@@ -6,5 +6,8 @@
     <string name="button_x_pow_2">
         X<sup>2 </sup>
     </string>
+    <string name="button_root_x">√x</string>
+    <string name="button_divide">÷</string>
+    <string name="button_pi">π</string>
 
 </resources>

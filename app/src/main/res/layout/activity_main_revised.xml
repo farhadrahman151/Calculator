@@ -3,6 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonForDel"
+        android:gravity="right"
+        android:text="0"
+        android:textSize="25sp"/>
 
     <Button
         android:layout_width="@dimen/button_min_width"
@@ -10,46 +18,79 @@
         android:id="@+id/buttonForLog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonForPoint"
         android:text="log"
+        android:layout_margin="@dimen/button_devider_width"
         />
+
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
         android:id="@+id/buttonForPoint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/buttonForLog"
-        android:text="."/>
+        app:layout_constraintRight_toLeftOf="@id/buttonFor0"
+        android:text="."
+        android:layout_margin="@dimen/button_devider_width"/>
+
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
         android:id="@+id/buttonFor1"
         app:layout_constraintBottom_toTopOf="@id/buttonForPoint"
-        app:layout_constraintLeft_toLeftOf="@id/buttonForPoint"
-        android:text="1"/>
-    <Button
-        android:layout_width="@dimen/button_min_width"
-        android:id="@+id/buttonFor4"
-        android:layout_height="@dimen/button_min_height" />
-    <Button
-        android:layout_width="@dimen/button_min_width"
-        android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonFor5"/>
+        app:layout_constraintLeft_toRightOf="@id/buttonForln"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor2"
+        android:text="1"
+        android:layout_margin="@dimen/button_devider_width"/>
+
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonFor6"/>
+        android:id="@+id/buttonFor2"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor0"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor1"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor3"
+        android:text="2"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:id="@+id/buttonForln"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:text="ln"
+        app:layout_constraintBottom_toTopOf="@id/buttonForLog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor1"
+        android:layout_margin="@dimen/button_devider_width"/>
+
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonFor7"/>
+        android:id="@+id/buttonfor4"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor1"
+        app:layout_constraintLeft_toRightOf="@id/buttonForSin"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor5"
+        android:text="4"
+        android:layout_margin="@dimen/button_devider_width"/>
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonFor8"/>
+        android:id="@+id/buttonFor5"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor2"
+        app:layout_constraintLeft_toRightOf="@id/buttonfor4"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor6"
+        android:text="5"
+        android:layout_margin="@dimen/button_devider_width"/>
+
     <Button
+        android:id="@+id/buttonForSin"
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonFor9"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonForln"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonfor4"
+        android:text="sin"
+        android:layout_margin="@dimen/button_devider_width"/>
 
     <Button
         android:id="@+id/buttonFor0"
@@ -57,7 +98,228 @@
         android:layout_height="@dimen/button_min_height"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/buttonForPoint" />
+        app:layout_constraintLeft_toRightOf="@id/buttonForPoint"
+        app:layout_constraintRight_toLeftOf="@id/buttonForExp"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="72dip"
+        android:layout_height="60dip"
+        android:id="@+id/buttonForExp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor0"
+        app:layout_constraintRight_toLeftOf="@id/buttonForEqual"
+        android:text="exp"
+        android:layout_margin="@dimen/button_devider_width"
+        />
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForEqual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonForExp"
+        android:text="="
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"
+        />
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor3"
+        app:layout_constraintBottom_toTopOf="@id/buttonForExp"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor2"
+        app:layout_constraintRight_toLeftOf="@id/buttonForPlus"
+        android:text="3"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor6"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor3"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor5"
+        app:layout_constraintRight_toLeftOf="@id/buttonForSub"
+        android:text="6"
+        android:layout_margin="@dimen/button_devider_width"
+        />
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForPlus"
+        app:layout_constraintBottom_toTopOf="@id/buttonForEqual"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor3"
+        android:text="+"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForSub"
+        app:layout_constraintBottom_toTopOf="@id/buttonForPlus"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor6"
+        android:text="-"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForMul"
+        app:layout_constraintBottom_toTopOf="@id/buttonForSub"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor9"
+        android:text="*"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"
+        />
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor9"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor6"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor8"
+        android:text="9"
+        app:layout_constraintRight_toLeftOf="@id/buttonForMul"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonFor8"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor5"
+        app:layout_constraintLeft_toRightOf="@id/buttonFor7"
+        android:text="8"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor9"
+        android:layout_margin="@dimen/button_devider_width"
+        />
+
+    <Button
+        android:id="@+id/buttonFor7"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/buttonfor4"
+        app:layout_constraintLeft_toRightOf="@+id/buttonForCos"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor8"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForCos"
+        android:text="cos"
+        app:layout_constraintBottom_toTopOf="@id/buttonForSin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonFor7"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForTan"
+        android:text="tan"
+        app:layout_constraintBottom_toTopOf="@id/buttonForCos"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonForRoot"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForRoot"
+        android:text="@string/button_root_x"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor7"
+        app:layout_constraintLeft_toRightOf="@id/buttonForTan"
+        app:layout_constraintRight_toLeftOf="@id/buttonForXPow2"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForXPow2"
+        android:text="@string/button_x_pow_2"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor8"
+        app:layout_constraintLeft_toRightOf="@id/buttonForRoot"
+        app:layout_constraintRight_toLeftOf="@id/buttonForXPowY"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForXPowY"
+        android:text="@string/button_x_pow_y"
+        app:layout_constraintBottom_toTopOf="@id/buttonFor9"
+        app:layout_constraintLeft_toRightOf="@id/buttonForXPow2"
+        app:layout_constraintRight_toLeftOf="@id/buttonForDivide"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForDivide"
+        android:text="@string/button_divide"
+        app:layout_constraintBottom_toTopOf="@id/buttonForMul"
+        app:layout_constraintLeft_toRightOf="@id/buttonForXPowY"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForPi"
+        android:text="@string/button_pi"
+        app:layout_constraintBottom_toTopOf="@id/buttonForTan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/button_devider_width"
+        app:layout_constraintRight_toLeftOf="@id/buttonForBracket"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForBracket"
+        android:text="()"
+        app:layout_constraintBottom_toTopOf="@id/buttonForRoot"
+        app:layout_constraintLeft_toRightOf="@id/buttonForPi"
+        android:layout_margin="@dimen/button_devider_width"
+        app:layout_constraintRight_toLeftOf="@id/buttonForPercent"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForPercent"
+        android:text="%"
+        app:layout_constraintBottom_toTopOf="@id/buttonForXPow2"
+        app:layout_constraintLeft_toRightOf="@id/buttonForBracket"
+        android:layout_margin="@dimen/button_devider_width"
+        app:layout_constraintRight_toLeftOf="@id/buttonForDel"/>
+
+    <Button
+        android:id="@+id/buttonForDel"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:text="Del"
+        app:layout_constraintBottom_toTopOf="@id/buttonForXPowY"
+        app:layout_constraintLeft_toRightOf="@id/buttonForPercent"
+        android:layout_margin="@dimen/button_devider_width"
+        app:layout_constraintRight_toLeftOf="@id/buttonForC"/>
+
+    <Button
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="@dimen/button_min_height"
+        android:id="@+id/buttonForC"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@id/buttonForDel"
+        app:layout_constraintBottom_toTopOf="@id/buttonForDivide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/button_devider_width"/>
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
