@@ -2,7 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,6 +11,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonForDel"
         android:gravity="right"
         android:text="0"
+        android:id="@+id/text"
         android:textSize="25sp"/>
 
     <Button
@@ -72,6 +74,7 @@
         app:layout_constraintRight_toLeftOf="@id/buttonFor5"
         android:text="4"
         android:layout_margin="@dimen/button_devider_width"/>
+
     <Button
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
@@ -217,16 +220,16 @@
         app:layout_constraintRight_toLeftOf="@id/buttonFor7"
         android:layout_margin="@dimen/button_devider_width"/>
 
-
     <Button
+        android:id="@+id/buttonForTan"
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
-        android:id="@+id/buttonForTan"
+        android:layout_margin="@dimen/button_devider_width"
         android:text="tan"
         app:layout_constraintBottom_toTopOf="@id/buttonForCos"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/buttonForRoot"
-        android:layout_margin="@dimen/button_devider_width"/>
+        app:layout_constraintRight_toLeftOf="@id/buttonForRoot" />
 
     <Button
         android:layout_width="@dimen/button_min_width"
