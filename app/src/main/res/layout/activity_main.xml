@@ -230,7 +230,7 @@
         android:layout_margin="@dimen/button_devider_width"
         android:layout_toLeftOf="@+id/button9"
         android:layout_toStartOf="@+id/button9"
-        android:text=" ( )"
+        android:text=" (  )"
         android:onClick="setText"/>
 
     <Button

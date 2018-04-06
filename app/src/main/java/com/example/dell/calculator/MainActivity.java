@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity{
             buttonforpercentage,buttonforrootoverx,buttonforxpowery,buttonforsquarex,
             buttonfordelete,buttonforEXP;
     TextView textview;
+    String processor;
 
 
     @Override
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity{
             if(viewGroup.getChildAt(i) instanceof Button){
                 viewGroup.getChildAt(i).setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 ((Button)viewGroup.getChildAt(i)).setTextColor(getResources().getColor(R.color.white));
+                ((Button)viewGroup.getChildAt(i)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        setText(view);
+                    }
+                });
+
             }
         }
 
@@ -85,18 +93,46 @@ public class MainActivity extends AppCompatActivity{
         buttonfornine.setTypeface(roboto9);
 
         buttonformul=findViewById(R.id.buttonForMul);
+        buttonformul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processor= textview.getText().toString();
+                textview.setText(processor + "*");
+            }
+        });
         Typeface roboto10 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonformul.setTypeface(roboto10);
 
         buttonforsub=findViewById(R.id.buttonForSub);
+        buttonforsub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processor= textview.getText().toString();
+                textview.setText(processor + "-");
+            }
+        });
         Typeface roboto11 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonforsub.setTypeface(roboto11);
 
         buttonforadd=findViewById(R.id.buttonForPlus);
+        buttonforadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processor= textview.getText().toString();
+                textview.setText(processor + "+");
+            }
+        });
         Typeface roboto12 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonforadd.setTypeface(roboto12);
 
         buttonfordiv=findViewById(R.id.buttonForDivide);
+        buttonfordiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processor= textview.getText().toString();
+                textview.setText(processor + "/");
+            }
+        });
         Typeface roboto13 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonfordiv.setTypeface(roboto13);
 
@@ -107,6 +143,14 @@ public class MainActivity extends AppCompatActivity{
 
 
         buttonforclear=findViewById(R.id.buttonForC);
+        buttonforclear= (Button)findViewById(R.id.buttonForC);
+        textview= (TextView) findViewById(R.id.textView);
+        buttonforclear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textview.setText("");
+            }
+        });
         Typeface roboto15 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonforclear.setTypeface(roboto15);
         buttonforclear.setBackgroundColor(getResources().getColor(R.color.red));
@@ -161,6 +205,14 @@ public class MainActivity extends AppCompatActivity{
         buttonforsquarex.setTypeface(roboto28);
 
         buttonfordelete=findViewById(R.id.buttonForDel);
+        buttonfordelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processor= textview.getText().toString();
+                processor = processor.substring(0,processor.length()-1);
+                textview.setText(processor);
+            }
+        });
         Typeface roboto29 = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
         buttonfordelete.setTypeface(roboto29);
 
@@ -186,7 +238,22 @@ public class MainActivity extends AppCompatActivity{
     public void setText(View view) {
         Button button = findViewById(view.getId());
         String text = button.getText().toString();
-        button.setText(text.substring(0, text.length() - 1));
-        textview.setText(textview.getText()+text);
-    }
-}
+        //button.setText(text.substring(0, text.length() - 1));
+        //int num = 0;
+
+
+            if(textview.getText().equals(Integer.toString(0)))
+                textview.setText(text);
+            else{
+                textview.setText(textview.getText()+text);
+            }
+
+        }
+
+
+        }
+
+
+
+
+

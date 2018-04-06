@@ -12,7 +12,8 @@
         android:gravity="right"
         android:text="0"
         android:id="@+id/text"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:textColor="@color/white"/>
 
     <Button
         android:layout_width="@dimen/button_min_width"
@@ -269,7 +270,8 @@
         app:layout_constraintBottom_toTopOf="@id/buttonForMul"
         app:layout_constraintLeft_toRightOf="@id/buttonForXPowY"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="@dimen/button_devider_width"/>
+        android:layout_margin="@dimen/button_devider_width"
+        android:onClick="setText"/>
 
     <Button
         android:layout_width="@dimen/button_min_width"
@@ -285,7 +287,7 @@
         android:layout_width="@dimen/button_min_width"
         android:layout_height="@dimen/button_min_height"
         android:id="@+id/buttonForBracket"
-        android:text="()"
+        android:text="( )"
         app:layout_constraintBottom_toTopOf="@id/buttonForRoot"
         app:layout_constraintLeft_toRightOf="@id/buttonForPi"
         android:layout_margin="@dimen/button_devider_width"
